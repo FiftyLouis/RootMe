@@ -7,6 +7,7 @@ def pingpong():
         junk = irc.recv(7000)
         print(junk)
         beg = junk.find(b"PING")
+        print(beg)
         if beg>-1:
             junk=junk[:beg]
             if junk[5:].find(b" ")>0:
